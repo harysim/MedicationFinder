@@ -1,0 +1,7 @@
+{
+  "name": "MedicationsFinder",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
