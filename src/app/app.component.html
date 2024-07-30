@@ -1,3 +1,9 @@
-<ion-app>
-  <ion-router-outlet></ion-router-outlet>
-</ion-app>
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ 'MEDICATION_SEARCH' | translate }}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="switchLanguage('en')">English</ion-button>
+      <ion-button (click)="switchLanguage('ar')">عربي</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
