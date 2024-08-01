@@ -11,5 +11,6 @@
   "BRAND": "Brand",
   "DOSAGE": "Dosage",
   "PRICE": "Price",
-  "TYPE": "Type"
+  "TYPE": "Type",
+  "CODE": "Code"
 }

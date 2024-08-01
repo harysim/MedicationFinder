@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
-import { SearchPageRoutingModule } from './search-routing.module';
-import { SearchPage } from './search.page';
+import { FavoritePageRoutingModule } from './favorite-routing.module';
+import { FavoritePage } from './favorite.page';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 @NgModule({
@@ -11,9 +11,9 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
     CommonModule,
     FormsModule,
     IonicModule,
-    SearchPageRoutingModule
+    FavoritePageRoutingModule
   ],
-  declarations: [SearchPage],
+  declarations: [FavoritePage],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class SearchPageModule {}
+export class FavoritePageModule {}

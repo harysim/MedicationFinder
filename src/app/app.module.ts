@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { IonicModule } from '@ionic/angular';
-import { AppRoutingModule } from './app-routing.module';
+import { RouteReuseStrategy } from '@angular/router';
+import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { IonicStorageModule } from '@ionic/storage-angular';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { FormsModule } from '@angular/forms'; // Import FormsModule
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -14,15 +16,13 @@ export function HttpLoaderFactory(http: HttpClient) {
 }
 
 @NgModule({
-  declarations: [
-    AppComponent,
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
     HttpClientModule,
-    FormsModule, // Add FormsModule here
+    IonicStorageModule.forRoot(),
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -31,7 +31,8 @@ export function HttpLoaderFactory(http: HttpClient) {
       }
     })
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class AppModule { }
+export class AppModule {}

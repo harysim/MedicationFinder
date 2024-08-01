@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
-import { SearchPageRoutingModule } from './search-routing.module';
-import { SearchPage } from './search.page';
+import { MedilistPageRoutingModule } from './medilist-routing.module';
+import { MedilistPage } from './medilist.page';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 @NgModule({
@@ -11,9 +11,9 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
     CommonModule,
     FormsModule,
     IonicModule,
-    SearchPageRoutingModule
+    MedilistPageRoutingModule
   ],
-  declarations: [SearchPage],
+  declarations: [MedilistPage],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class SearchPageModule {}
+export class MedilistPageModule {}

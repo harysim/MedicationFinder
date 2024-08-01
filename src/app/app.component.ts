@@ -15,7 +15,7 @@ export class AppComponent {
     this.translate.use(browserLang && browserLang.match(/en|ar/) ? browserLang : 'en');
   }
 
-  switchLanguage(language: string) {
-    this.translate.use(language);
+  switchLanguage(lang: string) {
+    this.translate.use(lang);
   }
 }
